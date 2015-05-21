@@ -163,7 +163,7 @@ int main (int argc, char **argv ) {
 	for (Card c: priceLists) { cout << c <<endl; }
 	cout << "----------------\n " << endl;
 	for (Card c: best) {cout << c << endl; }
-	cout << "MaxProfit = " << maxProfit <<"\n" << endl;
+	//cout << "MaxProfit = " << maxProfit <<"\n" << endl;
 	cout << "weight is listed as: " << weight <<endl;
 	cout << "Remaining cards are: " << endl;
 	for (Card c: priceLists) { cout << c << endl; }

@@ -1,22 +1,13 @@
-# Specify the target
-FLAGS = -Wall -std=c++11
+CXXFLAGS = -std=c++0x
 
-all: program1
+OBJECTS = Driver.o Card.o
 
-# Link one.o and two.o into an executable called
+program1:	$(OBJECTS)
+	g++ $(CXXFLAGS) $(OBJECTS) -o $@
 
-program1:	Driver.o Card.o
-	g++ $(FLAGS) Driver.o Card.o -o program1
-# g++ std=c++11 <etc>
-
-Driver.o:	driver.cpp
-	g++ $(FLAGS) -g -c driver.cpp -o Driver.o
-
-Card.o:	Card.cpp
-	g++ $(FLAGS) -g -c Card.cpp -o Card.o
+Driver.o:	Driver.cpp
+Card.o:	Card.h Card.cpp
 
 clean:
 	rm -f *.o program1
 
-tar:
-	tar cvzf Dinhofer_H_p1.tar.gz Dinhofer_H_p1
