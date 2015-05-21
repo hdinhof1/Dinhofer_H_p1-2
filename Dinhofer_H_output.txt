@@ -1,0 +1,2 @@
+Size of input: 3 MaxProfit: 2750 Number of cards: 2
+Size of input: 3 MaxProfit: 920 Number of cards: 1
